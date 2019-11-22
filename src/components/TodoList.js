@@ -2,11 +2,12 @@
  * @Description: In User Settings Edit
  * @Author: yuyue
  * @Date: 2019-10-19 16:17:01
- * @LastEditTime: 2019-11-21 17:14:08
+ * @LastEditTime: 2019-11-22 09:53:36
  * @LastEditors: Please set LastEditors
  */
 import React, { Component } from 'react';
 import {itemTodo} from './store'
+import store from './store'
 import { CSSTransition } from 'react-transition-group'
 
 import PropTypes from 'prop-types';
@@ -79,6 +80,7 @@ class TodoList extends Component {
                 {cid:456,title:'技术胖的个人博客-2'},
                 {cid:789,title:'技术胖的个人博客-3'},
             ],
+            initCount: store.getState(),
         }
         this.addInfo = this.addInfo.bind(this)
         this.delInfo = this.delInfo.bind(this)
@@ -122,6 +124,7 @@ class TodoList extends Component {
                 <HelloW2 name="yuyue112" />
                 <Welcome name={this.state.intName} age={this.state.age} />
                 <Welcome age="56" />
+        <p>{this.state.initCount}</p>
                 <HelloMsg name="zhangsan" />
                 <p>{this.state.id}</p>
                 <ul>

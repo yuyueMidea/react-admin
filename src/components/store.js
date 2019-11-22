@@ -2,11 +2,10 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-29 16:33:57
- * @LastEditTime: 2019-11-21 16:21:45
+ * @LastEditTime: 2019-11-22 09:56:25
  * @LastEditors: Please set LastEditors
  */
 import { createStore } from 'redux';
-import { stat } from 'fs';
 
 /**
  * 这是一个 reducer，形式为 (state, action) => state 的纯函数。
