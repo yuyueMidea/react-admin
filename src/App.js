@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-29 16:33:56
- * @LastEditTime: 2019-11-21 18:08:08
+ * @LastEditTime: 2019-11-23 17:54:43
  * @LastEditors: Please set LastEditors
  */
 import React,{Component} from 'react';
@@ -145,15 +145,10 @@ class Routers extends Component {
                           <Modal title="个人信息页面" width={400} wrapClassName="the_user_wrapper"
                           visible={this.state.visible} onOk={this.handleOk.bind(this)} onCancel={this.handleCancel.bind(this)}
                           maskClosable={false} keyboard={false} >
-                              {/* <ul className="the_user_info_dis"> */}
                                 {
-                                  /* Object.entries(this.state.userV).map((v,i)=>{
-                                    return <li key={i}>{v[0]}---{v[1]}</li>
-                                  }) */
                                    <List bordered size="small" dataSource={Object.entries(this.state.userV)}
                                     renderItem={(item,index)=>(<List.Item>{item[0]}--->{item[1]}</List.Item>)} /> 
                                 }
-                              {/* </ul> */}
                           </Modal>
                       </Menu>
                 </Header>
